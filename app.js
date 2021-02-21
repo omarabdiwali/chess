@@ -241,51 +241,23 @@ function moveSq(pos1, valid, colour, piece, prevPos) {
 }
 
 function getImage(piece) {
-  if (piece.includes("wPawn")) {
-    return P;
+   if (piece.includes("Pawn")) {
+    return piece[0] == "w" ? P : p;
   }
-  else if (piece.includes("bPawn")) {
-    return p;
+  else if (piece.includes("Rook")) {
+    return piece[0] == "w" ? R : r;
   }
-
-  else if (piece.includes("wRook")) {
-    return R;
+  else if (piece.includes("Knight")) {
+    return piece[0] == "w" ? N : n;
   }
-
-  else if (piece.includes("bRook")) {
-    return r;
+  else if (piece.includes("Bishop")) {
+    return piece[0] == "w" ? B : b;
   }
-
-  else if (piece.includes("wKnight")) {
-    return N;
+  else if (piece.includes("Queen")) {
+    return piece[0] == "w" ? Q : q;
   }
-
-  else if (piece.includes("bKnight")) {
-    return n;
-  }
-
-  else if (piece.includes("wBishop")) {
-    return B;
-  }
-
-  else if (piece.includes("bBishop")) {
-    return b;
-  }
-
-  else if (piece.includes("wQueen")) {
-    return Q;
-  }
-
-  else if (piece.includes("bQueen")) {
-    return q;
-  }
-
-  else if (piece.includes('wKing')) {
-    return K;
-  }
-
-  else if (piece.includes("bKing")) {
-    return k;
+  else if (piece.includes("King")) {
+    return piece[0] == "w" ? K : k;
   }
 }
 
